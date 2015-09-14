@@ -12,5 +12,8 @@
     "url": "ssh://55f6811489f5cfde9f000027@nodejs-linkb3at.rhcloud.com/~/git/nodejs.git/"
   },
   "author": "Jannis Eickenroth",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.13.3"
+  }
 }

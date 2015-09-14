@@ -43,7 +43,8 @@ var SampleApp = function() {
         }
 
         //  Local cache for static content.
-        self.zcache['index.html'] = fs.readFileSync('./index.html');
+        self.zcache['index.html'] = fs.readFileSync('./public/index.html');
+        
     };
 
 
@@ -105,7 +106,7 @@ var SampleApp = function() {
             res.send(self.cache_get('index.html') );
         };
     };
-    
+
 
     /**
      *  Initialize the server (express) and create the routes and register
@@ -114,6 +115,7 @@ var SampleApp = function() {
     self.initializeServer = function() {
         self.createRoutes();
         self.app = express.createServer();
+        self.app.use(express.static(__dirname + '/public'));
 
         //  Add handlers for the app (from the routes).
         for (var r in self.routes) {
