@@ -4,7 +4,7 @@
 // get all the tools we need
 var express  = require('express');
 var app      = express();
-var ipadress = process.env.OPENSHIFT_NODEJS_IP;
+var ipadress = process.env.OPENSHIFT_NODEJS_IP   || 127.0.0.1;
 var port     = process.env.OPENSHIFT_NODEJS_PORT || 8080;
 var mongoose = require('mongoose');
 var passport = require('passport');
