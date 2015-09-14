@@ -1,0 +1,16 @@
+{
+  "name": "passport-demo",
+  "version": "0.0.1",
+  "description": "Eine Präsentation über Passport für node.js",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://55f6811489f5cfde9f000027@nodejs-linkb3at.rhcloud.com/~/git/nodejs.git/"
+  },
+  "author": "Jannis Eickenroth",
+  "license": "ISC"
+}
