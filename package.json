@@ -21,7 +21,6 @@
   "scripts": {
     "start": "node server.js"
   },
-  "description": "Code for the entire scotch.io tutorial series: Complete Guide to Node Authentication",
   "version": "1.0.0",
   "devDependencies": {},
   "repository": {

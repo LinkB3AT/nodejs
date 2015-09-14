@@ -4,7 +4,7 @@
 // get all the tools we need
 var express  = require('express');
 var app      = express();
-var ipadress = process.env.OPENSHIFT_NODEJS_IP   || 127.0.0.1;
+var ipadress = process.env.OPENSHIFT_NODEJS_IP;
 var port     = process.env.OPENSHIFT_NODEJS_PORT || 8080;
 var mongoose = require('mongoose');
 var passport = require('passport');
@@ -40,5 +40,5 @@ app.use(flash()); // use connect-flash for flash messages stored in session
 require('./app/routes.js')(app, passport); // load our routes and pass in our app and fully configured passport
 
 // launch ======================================================================
-app.listen(port);
+app.listen(port, ipadress);
 console.log('The magic happens on port ' + port);
