@@ -5,7 +5,7 @@
 var express  = require('express');
 var app      = express();
 var ipadress = process.env.OPENSHIFT_NODEJS_IP;
-var port     = process.env.OPENSHIFT_NODEJS_PORT || 1337;
+var port     = process.env.OPENSHIFT_NODEJS_PORT || 8080;
 var mongoose = require('mongoose');
 var passport = require('passport');
 var flash    = require('connect-flash');
