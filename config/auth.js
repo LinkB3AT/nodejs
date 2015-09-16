@@ -18,7 +18,7 @@ module.exports = {
     'googleAuth' : {
         'clientID'         : '864269090616-3830r1fml666gopht4bgda7oo4ccou96.apps.googleusercontent.com',
         'clientSecret'     : 'RhmGphhaAr32Gz4soe30zFtx',
-        'callbackURL'      : 'http://nodejs-linkb3at.rhcloud.com:8080/auth/google/callback'
+        'callbackURL'      : 'http://nodejs-linkb3at.rhcloud.com/auth/google/callback'
     }
 
 };
