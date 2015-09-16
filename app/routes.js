@@ -35,6 +35,7 @@ module.exports = function(app, passport) {
         app.post('/login', passport.authenticate('local-login', {
             successRedirect : '/profile', // redirect to the secure profile section
             failureRedirect : '/login', // redirect back to the signup page if there is an error
+            successFlash: 'Du hast dich erfolgreich eingeloggt!',
             failureFlash : true // allow flash messages
         }));
 
@@ -48,6 +49,7 @@ module.exports = function(app, passport) {
         app.post('/signup', passport.authenticate('local-signup', {
             successRedirect : '/profile', // redirect to the secure profile section
             failureRedirect : '/signup', // redirect back to the signup page if there is an error
+            successFlash: 'Du hast dich erfolgreich registriert!',
             failureFlash : true // allow flash messages
         }));
 
@@ -60,7 +62,9 @@ module.exports = function(app, passport) {
         app.get('/auth/facebook/callback',
             passport.authenticate('facebook', {
                 successRedirect : '/profile',
-                failureRedirect : '/'
+                failureRedirect : '/',
+            successFlash: 'Du hast dich erfolgreich registriert!',
+            failureFlash : true
             }));
 
     // twitter --------------------------------
@@ -72,7 +76,9 @@ module.exports = function(app, passport) {
         app.get('/auth/twitter/callback',
             passport.authenticate('twitter', {
                 successRedirect : '/profile',
-                failureRedirect : '/'
+                failureRedirect : '/',
+            successFlash: 'Du hast dich erfolgreich registriert!',
+            failureFlash : true
             }));
 
 
@@ -85,7 +91,9 @@ module.exports = function(app, passport) {
         app.get('/auth/google/callback',
             passport.authenticate('google', {
                 successRedirect : '/profile',
-                failureRedirect : '/'
+                failureRedirect : '/',
+            successFlash: 'Du hast dich erfolgreich registriert!',
+            failureFlash : true
             }));
 
 // =============================================================================
@@ -99,6 +107,7 @@ module.exports = function(app, passport) {
         app.post('/connect/local', passport.authenticate('local-signup', {
             successRedirect : '/profile', // redirect to the secure profile section
             failureRedirect : '/connect/local', // redirect back to the signup page if there is an error
+            successFlash: 'Du hast dich erfolgreich registriert!',
             failureFlash : true // allow flash messages
         }));
 
@@ -111,7 +120,9 @@ module.exports = function(app, passport) {
         app.get('/connect/facebook/callback',
             passport.authorize('facebook', {
                 successRedirect : '/profile',
-                failureRedirect : '/'
+                failureRedirect : '/',
+            successFlash: 'Du hast deinen Facebook-Account erfolgreich verbunden!',
+            failureFlash : true
             }));
 
     // twitter --------------------------------
@@ -123,7 +134,9 @@ module.exports = function(app, passport) {
         app.get('/connect/twitter/callback',
             passport.authorize('twitter', {
                 successRedirect : '/profile',
-                failureRedirect : '/'
+                failureRedirect : '/',
+            successFlash: 'Du hast deinen twitter-Account erfolgreich verbunden!',
+            failureFlash : true
             }));
 
 
@@ -136,7 +149,9 @@ module.exports = function(app, passport) {
         app.get('/connect/google/callback',
             passport.authorize('google', {
                 successRedirect : '/profile',
-                failureRedirect : '/'
+                failureRedirect : '/',
+            successFlash: 'Du hast deinen Google-Account erfolgreich verbunden!',
+            failureFlash : true
             }));
 
 // =============================================================================
